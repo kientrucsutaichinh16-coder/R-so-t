@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="35%" cy="25%" r="85%">
+      <stop offset="0%" stop-color="#13513c" />
+      <stop offset="55%" stop-color="#072219" />
+      <stop offset="100%" stop-color="#04130e" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1c1" />
+      <stop offset="45%" stop-color="#d9b45a" />
+      <stop offset="100%" stop-color="#8f6f26" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#0a3d99" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="224" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.7" />
+
+  <!-- Khai Minh Star -->
+  <polygon
+    points="256,54 301,164 418,164 323,234 360,346 256,277 152,346 189,234 94,164 211,164"
+    fill="url(#goldGrad)"
+    opacity="0.95"
+  />
+
+  <!-- Geometric K -->
+  <path
+    d="M142,196 H178 V252 L226,196 H270 L214,260 L274,332 H228 L178,270 V332 H142 Z"
+    fill="url(#blueGrad)"
+    stroke="#04130e"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+
+  <!-- Geometric M -->
+  <path
+    d="M276,332 V196 H314 L344,268 L374,196 H412 V332 H376 V252 L352,312 H336 L312,252 V332 Z"
+    fill="#fff6d6"
+    stroke="#8a6623"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+
+  <!-- Golden prosperity arc -->
+  <path
+    d="M110,362 C164,432 318,438 418,342"
+    fill="none"
+    stroke="url(#goldGrad)"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+</svg>

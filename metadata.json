@@ -1,0 +1,6 @@
+{
+  "name": "Khai Minh – Hành Trình Tài Chính",
+  "description": "Ứng dụng lập kế hoạch sức khỏe tài chính và hành trình an yên thịnh vượng trên máy tính, điện thoại và máy tính bảng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
