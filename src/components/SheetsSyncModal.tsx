@@ -22,6 +22,7 @@ import {
 import {
   APPS_SCRIPT_SNIPPET,
   createKhaiMinhSpreadsheet,
+  DEFAULT_APPS_SCRIPT_URL,
   getSpreadsheetMetadata,
   listAppSpreadsheets,
   parseSpreadsheetId,
@@ -60,7 +61,7 @@ export const SheetsSyncModal: React.FC<SheetsSyncModalProps> = ({
   onActivateAutoSave,
   onDisableAutoSave,
 }) => {
-  const [activeTab, setActiveTab] = useState<SetupTab>('google');
+  const [activeTab, setActiveTab] = useState<SetupTab>('apps_script');
   const [user, setUser] = useState<User | null>(null);
   const [needsAuth, setNeedsAuth] = useState(true);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
@@ -74,7 +75,7 @@ export const SheetsSyncModal: React.FC<SheetsSyncModalProps> = ({
   const [activeSheetMeta, setActiveSheetMeta] = useState<SpreadsheetMetadata | null>(null);
 
   const [appsScriptUrl, setAppsScriptUrl] = useState<string>(
-    () => localStorage.getItem(APPS_SCRIPT_URL_STORAGE_KEY) || ''
+    () => localStorage.getItem(APPS_SCRIPT_URL_STORAGE_KEY) || DEFAULT_APPS_SCRIPT_URL
   );
   const [copiedScript, setCopiedScript] = useState(false);
 

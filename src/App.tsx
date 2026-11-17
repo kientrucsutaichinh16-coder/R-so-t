@@ -8,6 +8,7 @@ import { PWAInstallButton } from './components/PWAInstallButton';
 import { SheetsSyncModal, type AutoSaveConfig } from './components/SheetsSyncModal';
 import { getAccessToken, initAuth } from './services/googleAuth';
 import {
+  DEFAULT_APPS_SCRIPT_URL,
   sendToAppsScriptWebhook,
   upsertSubmissionToSpreadsheet,
 } from './services/googleSheetsService';
@@ -32,10 +33,10 @@ export default function App() {
 
   const [autoSaveConfig, setAutoSaveConfig] = useState<AutoSaveConfig | null>(() => {
     const savedAppsScript = localStorage.getItem(APPS_SCRIPT_URL_STORAGE_KEY)?.trim();
-    if (savedAppsScript) {
-      return { mode: 'apps_script', appsScriptUrl: savedAppsScript };
-    }
-    return null;
+    return {
+      mode: 'apps_script',
+      appsScriptUrl: savedAppsScript || DEFAULT_APPS_SCRIPT_URL,
+    };
   });
   const [isSetupModalOpen, setIsSetupModalOpen] = useState(false);
 

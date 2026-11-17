@@ -306,6 +306,9 @@ export async function upsertSubmissionToSpreadsheet(
   return { metadata, rowNumber };
 }
 
+export const DEFAULT_APPS_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbyevFsT9eAW6BetPEU9NKFPd8RIFuB93f1xGWS--kICs8q7CJrmzBX5aISlX10hvY2h/exec';
+
 export async function sendToAppsScriptWebhook(
   webhookUrl: string,
   headers: string[],
@@ -318,6 +321,7 @@ export async function sendToAppsScriptWebhook(
   await fetch(url, {
     method: 'POST',
     mode: 'no-cors',
+    keepalive: true,
     headers: {
       'Content-Type': 'text/plain;charset=utf-8',
     },
